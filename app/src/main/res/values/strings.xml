@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GIS_OPTIK_20201</string>
+    <string name="ke_1">Pastikan anda memiliki paket data atau terhubung ke wifi</string>
+    <string name="ke_2">Pastikan perizinan GPS anda telah aktif</string>
+    <string name="ke_3">Pastikan perizinan Phone anda telah aktif</string>
+    <string name="ke_4">Pastikan perizinan Phone anda telah aktif</string>
+    <string name="ke_5">Pastikan perizinan Camera dan Storage anda telah aktif</string>
+
+    <string name="version_unknown">Unknown</string>
+    <string name="app_version">Version</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+      AIzaSyBXgVFTdV4vPzuSR4m73oPpTs34X8vfQVQ</string>
+    <string name="password">lupa</string>
+</resources>

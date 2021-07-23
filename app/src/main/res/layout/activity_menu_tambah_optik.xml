@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.menu.menu_register">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/newfsdsdff"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/grey_10"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/edit_nama"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:ems="10"
+                            android:hint="Nama Lapangan"
+                            android:inputType="textPersonName"
+                            android:text="amin"
+
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/grey_10"
+                        android:textColorHint="#000000"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/newfsdsgggdff">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edit_alamat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="Alamat"
+                            android:inputType="textMultiLine"
+                            android:maxLines="12"
+                            android:minLines="7"
+                            android:textColor="#000000"
+                            android:textSize="24sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/grey_10"
+                        android:textColorHint="#000000"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/newfsdsgggdff">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edit_iformasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="Informasi"
+                            android:inputType="textMultiLine"
+                            android:maxLines="12"
+                            android:minLines="7"
+                            android:textColor="#000000"
+                            android:textSize="24sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ASDASDcasdsaDFD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/grey_10"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/edit_telpon"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:ems="10"
+                            android:hint="Telpon"
+                            android:inputType="number"
+                            android:text="54534543"
+
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ASDASDcasdsaDFD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/grey_10"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/edit_jam"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:ems="10"
+                            android:hint="Jam Operasional"
+                            android:inputType="text"
+                            android:text="54534543"
+
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ddsdadasda"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/grey_10"
+
+                        app:layout_constraintBottom_toTopOf="@+id/faffd">
+
+                        <EditText
+                            android:id="@+id/edit_lat"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:ems="10"
+                            android:hint="LAT"
+                            android:inputType="number"
+                            android:text="amin"
+
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ASDASDDFD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/grey_10"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/edit_lng"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:ems="10"
+                            android:hint="LNG"
+                            android:inputType="number"
+                            android:text="amin@gmail.com"
+
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="STATUS"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/radio_grup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp">
+
+                        <RadioButton
+                            android:id="@+id/rd_buka"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="BUKA" />
+
+                        <RadioButton
+                            android:id="@+id/rd_tutup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TUTUP" />
+                    </RadioGroup>
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="BPJS"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/radio_grup_bpjs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp">
+
+                        <RadioButton
+                            android:id="@+id/rd_ada"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ADA" />
+
+                        <RadioButton
+                            android:id="@+id/rd_tidak"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TIDAK ADA" />
+                    </RadioGroup>
+
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_weight="1"
+                        android:text="Register SiKomo"
+                        android:textColor="#2196F3"
+
+                        android:textSize="@dimen/_20sdp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_foto"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                      android:background="@drawable/ic_baseline_image_24" />
+
+                    <Button
+                        android:id="@+id/btn_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="32dp"
+                        android:background="@color/bg_screen3"
+                        android:text="Simpan"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_16sdp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
