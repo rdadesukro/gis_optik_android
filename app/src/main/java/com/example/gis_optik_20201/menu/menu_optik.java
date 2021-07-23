@@ -1,5 +1,6 @@
 package com.example.gis_optik_20201.menu;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -37,6 +38,7 @@ public class menu_optik extends AppCompatActivity implements optik_view, adapter
     com.example.gis_optik_20201.presenter.optik optik;
     private FloatingActionButton floatingActionButton2;
     AlertDialog.Builder acion;
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,7 +148,8 @@ public class menu_optik extends AppCompatActivity implements optik_view, adapter
                         break;
                     case 1:
 
-                        //e hapus(id);
+                        optik.hapus_optik(String.valueOf(id),progressDialog);
+
 
                         break;
                 }

@@ -81,10 +81,10 @@ public interface ApiRequest {
 
 
     @Multipart
-    @POST("edit_lapangan")
-    Call<Response_login> edit_lapangan(
+    @POST("edit_optik")
+    Call<Response_login> edit_optik(
             @Part("id") RequestBody id,
-            @Part("nama") RequestBody nama,
+            @Part("nama_optik") RequestBody nama,
             @Part("alamat") RequestBody alamat,
             @Part("phone") RequestBody phone,
             @Part("lat") RequestBody lat,
@@ -114,7 +114,7 @@ public interface ApiRequest {
     @Multipart
     @POST("add_foto")
     Call<Response_login> add_foto(
-            @Part("jenis_id") RequestBody jenis_id,
+            @Part("optik_id") RequestBody optik_id,
             @Part("nama") RequestBody nama,
             @Part MultipartBody.Part foto);
 
@@ -122,7 +122,7 @@ public interface ApiRequest {
     @POST("edit_foto")
     Call<Response_login> edit_foto(
             @Part("id") RequestBody id,
-            @Part("jenis_id") RequestBody jenis_id,
+            @Part("optik_id") RequestBody optik_id,
             @Part("nama") RequestBody nama,
             @Part MultipartBody.Part foto);
 
@@ -193,6 +193,18 @@ public interface ApiRequest {
     @POST("hapus_token")
     Call<Response_login> hapus_token(
             @Field("token") String token);
+
+    @FormUrlEncoded
+    @POST("hapus_optik")
+    Call<Response_action> hapus_optik(
+            @Field("id") String id);
+
+
+    @FormUrlEncoded
+    @POST("hapus_foto")
+    Call<Response_action> hapus_foto(
+            @Field("id") String id);
+
 
 
     @FormUrlEncoded

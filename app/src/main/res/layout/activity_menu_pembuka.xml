@@ -6,15 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".menu_pembuka">
 
-    <TextView
-        android:id="@+id/textView4"
+    <ImageView
+        android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="OPTIK"
-        android:textColor="@color/green_300"
-        android:textSize="36sp"
+        android:src="@drawable/log"
         app:layout_constraintBottom_toTopOf="@+id/progressBar2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

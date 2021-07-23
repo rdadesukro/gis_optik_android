@@ -1,10 +1,12 @@
 package com.example.gis_optik_20201.presenter;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.Log;
 
+import com.example.gis_optik_20201.model.action.Response_action;
 import com.example.gis_optik_20201.model.login.Response_login;
 import com.example.gis_optik_20201.model.optik.IsiItem_optik;
 import com.example.gis_optik_20201.model.optik.Response_optik;
@@ -121,7 +123,7 @@ public class optik {
                     informasi,
                     foto);
         }else {
-            sendbio = api.edit_lapangan(
+            sendbio = api.edit_optik(
                     id,
                     nama,
                     alamat,
@@ -174,7 +176,46 @@ public class optik {
         });
 
     }
+    public  void  hapus_optik(String id, ProgressDialog pDialog ){
+        pDialog = new ProgressDialog(ctx);
+        pDialog.setTitle("Mohon Tunggu!!!");
+        pDialog.setMessage("Hapus Data");
+        pDialog.setCancelable(false);
+        pDialog.setCanceledOnTouchOutside(false);
+        pDialog.show();
+        ProgressDialog finalPDialog = pDialog;
+        ApiRequest api = Retroserver_server_AUTH.getClient().create(ApiRequest.class);
 
+        Call<Response_action> sendbio = api.hapus_optik(id);
+
+
+        sendbio.enqueue(new Callback<Response_action>() {
+            @Override
+            public void onResponse(Call<Response_action> call, Response<Response_action> response) {
+
+                String kode = response.body().getKode();
+                Log.i("kode_foto", "onResponse: " + kode);
+
+                if (kode.equals("1")) {
+                    finalPDialog.dismiss();
+                    new GlideToast.makeToast((Activity) ctx, "" + response.body().getMessage(), GlideToast.LENGTHLONG, GlideToast.SUCCESSTOAST, GlideToast.CENTER).show();
+
+                } else {
+
+                    finalPDialog.dismiss();
+                    new GlideToast.makeToast((Activity) ctx, "" + response.body().getMessage(), GlideToast.LENGTHLONG, GlideToast.WARNINGTOAST, GlideToast.CENTER).show();
+                }
+
+            }
+            @Override
+            public void onFailure(Call<Response_action> call, Throwable t) {
+                Log.i("cek_error", "onFailure: "+t);
+
+                Log.d("RETRO", "Falure : " + "Gagal Mengirim Request");
+            }
+        });
+
+    }
 
     }
 

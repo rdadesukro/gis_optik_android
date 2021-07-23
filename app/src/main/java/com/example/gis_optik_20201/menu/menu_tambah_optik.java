@@ -193,22 +193,25 @@ public class menu_tambah_optik extends AppCompatActivity implements  Validator.V
                             return false;
                         }
                     })
-                    .error(R.drawable.ic_check_black_24dp)
                     .centerCrop()
                     .into(img_foto);
 
 
             if (status.equals("buka")){
                 rd_buka.setChecked(true);
+                ststus_optik="buka";
             }
             if (status.equals("tutup")){
                 rd_tutup.setChecked(true);
+                ststus_optik="tuto";
             }
             if (statu_bpjs.equals("ada")){
                 rd_ada.setChecked(true);
+                sts_bpjs="ada";
             }
             if (statu_bpjs.equals("tidak")){
                 rd_tidak.setChecked(true);
+                sts_bpjs="tidak";
             }
 
             edit_nama.setText(nama);
@@ -368,7 +371,7 @@ public class menu_tambah_optik extends AppCompatActivity implements  Validator.V
                 info,
                 jam,
                 body);
-       // file=null;
+         file=null;
     }
 
     private RequestBody createPartFromString(String descriptionString) {

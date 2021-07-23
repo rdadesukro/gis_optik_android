@@ -39,6 +39,8 @@ import com.smarteist.autoimageslider.SliderView;
 
 import java.util.List;
 
+import maes.tech.intentanim.CustomIntent;
+
 public class menu_detail extends AppCompatActivity implements optik_view, slider_view {
 
 
@@ -100,10 +102,10 @@ public class menu_detail extends AppCompatActivity implements optik_view, slider
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Guru.putString("id_jenis", id_jenis);
-//                Intent goInput = new Intent(menu_detail.this, menu_add_foto.class);
-//                startActivity(goInput);
-//                CustomIntent.customType(menu_detail.this, "fadein-to-fadeout");
+                Guru.putString("id_optik", id_optik);
+                Intent goInput = new Intent(menu_detail.this, menu_add_foto.class);
+                startActivity(goInput);
+                CustomIntent.customType(menu_detail.this, "fadein-to-fadeout");
             }
         });
 

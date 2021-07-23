@@ -43,6 +43,7 @@
         <activity android:name=".menu.menu_tambah_optik" />
         <activity android:name=".menu.menu_tentang_aplikasi" />
         <activity android:name=".menu.menu_utama" />
+        <activity android:name=".menu.menu_add_foto" />
         <activity android:name=".menu.menu_pembuka">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
