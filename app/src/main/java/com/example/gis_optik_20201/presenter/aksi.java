@@ -105,6 +105,7 @@ public class aksi {
                 try {
                     String kode = response.body().getKode();
                     String role = String.valueOf(response.body().getRole());
+                    String email = String.valueOf(response.body().getEmail());
                     Log.i("role_kode", "onResponse: " + role);
 
                     //role = 1 = user
@@ -116,6 +117,7 @@ public class aksi {
                             new GlideToast.makeToast((Activity) ctx, "" + response.body().getMessage(), GlideToast.LENGTHLONG, GlideToast.SUCCESSTOAST, GlideToast.CENTER).show();
                             Guru.putString("status_loign", "true");
                             Guru.putString("role", role);
+                            Guru.putString("email", email);
                             Guru.putString("user_id", String.valueOf(response.body().getUserId()));
                             Guru.putString("auth", response.body().getAccessToken());
                             Intent intent = new Intent((Activity) ctx, menu_utama_admin.class);

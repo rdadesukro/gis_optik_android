@@ -154,6 +154,7 @@ public class menu_detail extends AppCompatActivity implements optik_view, slider
     private void initView() {
 
         btnCall = (ImageView) findViewById(R.id.btn_call);
+        txtTgl = (TextView) findViewById(R.id.txt_tgl);
         txtNama = (TextView) findViewById(R.id.txt_nama);
         txtNo = (TextView) findViewById(R.id.txt_no);
         imgFoto = (ImageView) findViewById(R.id.img_foto);
@@ -177,13 +178,13 @@ public class menu_detail extends AppCompatActivity implements optik_view, slider
                 txtNama.setText(optik.get(i).getNamaOptik());
                 //  ratingBar2.setRating(Float.parseFloat(String.valueOf(jenis_detail.get(i).getRaiting())));
                 txtInformasi.setText(optik.get(i).getInformasi());
-                txtTgl.setText(optik.get(i).getCreatedAt());
+                txtTgl.setText("Jam Buka : " + optik.get(i).getJamOprasional());
                 txtNo.setText(optik.get(i).getPhone());
                 Log.i("isi_foto", "jenis_detail: " + optik.get(i).getFoto());
 
 
                 Glide.with(this)
-                        .load("http://192.168.43.48/gis_badminton/public/foto_slider/" + optik.get(i).getFoto())
+                        .load("http://192.168.43.48/gis_optik/public/foto_optik/" + optik.get(i).getFoto())
                         .listener(new RequestListener<Drawable>() {
                             @Override
                             public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {

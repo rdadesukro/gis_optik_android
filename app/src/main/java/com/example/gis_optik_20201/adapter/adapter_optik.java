@@ -178,16 +178,13 @@ public class adapter_optik extends RecyclerView.Adapter<adapter_optik.HolderData
                 @Override
                 public void onClick(View v) {
 //                    onImageClickListener.onImageClick(String.valueOf(dm.getId()), String.valueOf(dm.getDataibuId()));
-
-
-
                         if (dm.getStatus().equals("buka")){
                             Intent goInput = new Intent(ctx, menu_detail.class);
                             Guru.putString("id_optik", String.valueOf(dm.getId()));
                             ctx.startActivity(goInput);
                             CustomIntent.customType(ctx, "bottom-to-up");
                         }else {
-                            Toast.makeText(ctx, "MAAF LAPANGAN PENUH", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ctx, "MAAF OPTIK TUTUP", Toast.LENGTH_SHORT).show();
                         }
 
 

@@ -10,6 +10,18 @@ public class Response_login {
 	@SerializedName("role")
 	private int role;
 
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	@SerializedName("email")
+	private String email;
+
 	@SerializedName("expires_at")
 	private String expiresAt;
 

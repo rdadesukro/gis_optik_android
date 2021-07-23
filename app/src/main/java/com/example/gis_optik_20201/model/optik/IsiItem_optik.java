@@ -4,8 +4,16 @@ import com.google.gson.annotations.SerializedName;
 
 public class IsiItem_optik {
 
+	public void setLng(double lng) {
+		this.lng = lng;
+	}
+
+	public double getLng() {
+		return lng;
+	}
+
 	@SerializedName("lng")
-	private int lng;
+	private double lng;
 
 	@SerializedName("created_at")
 	private String createdAt;
@@ -34,8 +42,16 @@ public class IsiItem_optik {
 	@SerializedName("status_bpjs")
 	private String statusBpjs;
 
+	public void setLat(double lat) {
+		this.lat = lat;
+	}
+
+	public double getLat() {
+		return lat;
+	}
+
 	@SerializedName("lat")
-	private int lat;
+	private double lat;
 
 	@SerializedName("informasi")
 	private String informasi;
@@ -43,13 +59,7 @@ public class IsiItem_optik {
 	@SerializedName("status")
 	private String status;
 
-	public void setLng(int lng){
-		this.lng = lng;
-	}
 
-	public int getLng(){
-		return lng;
-	}
 
 	public void setCreatedAt(String createdAt){
 		this.createdAt = createdAt;
@@ -123,13 +133,7 @@ public class IsiItem_optik {
 		return statusBpjs;
 	}
 
-	public void setLat(int lat){
-		this.lat = lat;
-	}
 
-	public int getLat(){
-		return lat;
-	}
 
 	public void setInformasi(String informasi){
 		this.informasi = informasi;

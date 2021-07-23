@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.example.gis_optik_20201.R;
+import com.example.gis_optik_20201.utils.PERMISSIONS;
 import com.github.squti.guru.Guru;
 
 public class menu_utama extends AppCompatActivity {
@@ -19,12 +20,15 @@ public class menu_utama extends AppCompatActivity {
     private CardView cardMarker;
     private CardView cardPetunjuk;
     private CardView cardTentang;
+    PERMISSIONS permissions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_utama);
         initView();
+        permissions = new PERMISSIONS(menu_utama.this);
+        permissions.checkPermission();
         cardOptik.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,5 +88,9 @@ public class menu_utama extends AppCompatActivity {
             }
         });
         return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
     }
 }

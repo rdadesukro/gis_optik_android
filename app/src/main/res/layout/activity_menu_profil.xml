@@ -1,9 +1,338 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".menu.menu_profil">
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/log" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView6">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btn_keluar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView22"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView22"
+                        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                    <View
+                        android:id="@+id/view7"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/grey_5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                       
+                        android:text="Logout"
+                        android:textColor="#050505"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView16"
+                        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+                    <ImageView
+                        android:id="@+id/imageView16"
+                        android:layout_width="@dimen/_20sdp"
+
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView22"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView22"
+                        app:srcCompat="@drawable/ic_baseline_image_24" />
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/grey_5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                       
+
+                        android:text="Action"
+                        android:textColor="#7E7676"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btn_password2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/txt_email"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/txt_email"
+                        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                    <ImageView
+                        android:id="@+id/btn_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/txt_password"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView29"
+                        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                    <View
+                        android:id="@+id/view12"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/grey_5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_password" />
+
+                    <TextView
+                        android:id="@+id/txt_password"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:inputType="textPassword"
+                        android:text="081272168388"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintBottom_toTopOf="@+id/view12"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_password"
+                        app:layout_constraintStart_toStartOf="@+id/textView29"
+                        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+
+
+                        android:text="Password"
+                        android:textColor="#050505"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView23"
+                        app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+                    <ImageView
+                        android:id="@+id/imageView23"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/txt_password"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView29"
+                        app:srcCompat="@drawable/ic_baseline_image_24" />
+
+                    <View
+                        android:id="@+id/view8"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/grey_5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_email" />
+
+                    <ImageView
+                        android:id="@+id/btn_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/txt_email"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView22"
+                        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                    <TextView
+                        android:id="@+id/txt_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="rdade@gmail.com"
+                        android:textSize="@dimen/_10sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_keluar"
+                        app:layout_constraintStart_toStartOf="@+id/textView22"
+                        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+
+                        android:text="Email"
+
+                        android:textColor="#050505"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/imageView16"
+                        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+                    <ImageView
+                        android:id="@+id/imageView16"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="8dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/txt_email"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView22"
+                        app:srcCompat="@drawable/ic_baseline_image_24" />
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/grey_5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+
+                        android:text="Profil Setting"
+                        android:textColor="#7E7676"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/txt_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Belum Login!!"
+        android:textColor="#DD1010"
+        android:textSize="18dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <ImageView
+        android:id="@+id/btn_login"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_baseline_image_24"
+        android:text="LOGIN"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,11 @@
 package com.example.gis_optik_20201.menu;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -10,6 +14,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.example.gis_optik_20201.R;
 import com.example.gis_optik_20201.model.optik.IsiItem_optik;
@@ -19,6 +24,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
@@ -40,16 +46,19 @@ public class menu_marker extends AppCompatActivity implements optik_view,OnMapRe
     LocationManager locationManager;
     String tag_json_obj = "json_obj_req";
     static final int REQUEST_LOCATION = 1;
-   com.example.gis_optik_20201.presenter.optik optik;
+    com.example.gis_optik_20201.presenter.optik optik;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_marker);
+
         mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
         optik = new optik(this,menu_marker.this);
-
+        optik.get_optik("optik","");
+        mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
-
+//
     @SuppressLint("MissingPermission")
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -76,9 +85,10 @@ public class menu_marker extends AppCompatActivity implements optik_view,OnMapRe
 
         gMap.animateCamera(CameraUpdateFactory.zoomTo(8), 2000, null);
 
-        optik.get_optik("1","");
+        optik.get_optik("optik","");
         //getMarkers2();
     }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -88,6 +98,27 @@ public class menu_marker extends AppCompatActivity implements optik_view,OnMapRe
                 getLocation();
                 break;
         }
+    }
+    private BitmapDescriptor BitmapFromVector(Context context, int vectorResId) {
+        // below line is use to generate a drawable.
+        Drawable vectorDrawable = ContextCompat.getDrawable(context, vectorResId);
+
+        // below line is use to set bounds to our vector drawable.
+        vectorDrawable.setBounds(0, 0, vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight());
+
+        // below line is use to create a bitmap for our
+        // drawable which we have added.
+        Bitmap bitmap = Bitmap.createBitmap(vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+
+        // below line is use to add bitmap in our canvas.
+        Canvas canvas = new Canvas(bitmap);
+
+        // below line is use to draw our
+        // vector drawable in canvas.
+        vectorDrawable.draw(canvas);
+
+        // after generating our bitmap we are returning our bitmap.
+        return BitmapDescriptorFactory.fromBitmap(bitmap);
     }
     private void addMarker(double lat,double lng , final String title) {
 
@@ -114,7 +145,7 @@ public class menu_marker extends AppCompatActivity implements optik_view,OnMapRe
             ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
 
         } else {
-            @SuppressLint("MissingPermission") Location location = locationManager.getLastKnownLocation( LocationManager.NETWORK_PROVIDER);
+            Location location = locationManager.getLastKnownLocation( LocationManager.NETWORK_PROVIDER);
 
             if (location != null){
                 latti = location.getLatitude();
@@ -130,7 +161,6 @@ public class menu_marker extends AppCompatActivity implements optik_view,OnMapRe
         }
 
     }
-
 
     @Override
     public void optik(List<IsiItem_optik> optik) {
@@ -148,11 +178,11 @@ public class menu_marker extends AppCompatActivity implements optik_view,OnMapRe
         } catch (Exception e) {
 
         }
+
     }
 
     @Override
     public void status(String status, String pesan) {
-
 
     }
 }

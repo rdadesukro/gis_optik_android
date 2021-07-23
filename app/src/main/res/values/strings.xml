@@ -8,7 +8,8 @@
 
     <string name="version_unknown">Unknown</string>
     <string name="app_version">Version</string>
+    <string name="ttg">"Aplikasi ini merupakan aplikasi bantuan untuk masyarakat kota Jambi yang merasa kesulitan dalam mencari optik sesuai kebutuhan, sehingga pencarian informasi optik dapat menghemat waktu dan efisien"</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
-      AIzaSyBXgVFTdV4vPzuSR4m73oPpTs34X8vfQVQ</string>
+      AIzaSyDez3fuHPVNfVKp3Ji5dhtiKyEgOCbI0jE</string>
     <string name="password">lupa</string>
 </resources>
