@@ -123,6 +123,7 @@ public class slider {
                     String kode = response.body().getKode();
                     Log.i("kode_update", "onResponse: " + kode);
                     countryView.status(kode);
+                    countryView.status(kode);
 
                     if (kode.equals("1")) {
                         finalPDialog.dismiss();
@@ -170,7 +171,7 @@ public class slider {
 
                 String kode = response.body().getKode();
                 Log.i("kode_foto", "onResponse: " + kode);
-
+                countryView.status(kode);
                 if (kode.equals("1")) {
                     finalPDialog.dismiss();
                     new GlideToast.makeToast((Activity) ctx, "" + response.body().getMessage(), GlideToast.LENGTHLONG, GlideToast.SUCCESSTOAST, GlideToast.CENTER).show();

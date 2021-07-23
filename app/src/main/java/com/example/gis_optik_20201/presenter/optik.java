@@ -149,6 +149,7 @@ public class optik {
 
                     //role = 1 = pemilik
                     //role = 2 = usert
+                    countryView.status(kode,"");
                     if (kode.equals("1")) {
                         finalPDialog.dismissWithAnimation();
 //                    login_new(email,password,finalPDialog);
@@ -195,6 +196,7 @@ public class optik {
 
                 String kode = response.body().getKode();
                 Log.i("kode_foto", "onResponse: " + kode);
+                countryView.status(kode,"");
 
                 if (kode.equals("1")) {
                     finalPDialog.dismiss();

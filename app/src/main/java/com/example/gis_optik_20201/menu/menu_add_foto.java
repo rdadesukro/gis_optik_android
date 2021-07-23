@@ -129,6 +129,12 @@ public class menu_add_foto extends AppCompatActivity implements CameraCapture.On
         }else {
             btnPanggil2.setVisibility(View.VISIBLE);
         }
+        swifeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                slider.get_slider(id_optik);
+            }
+        });
     }
     @Override
     public void onResume() {
