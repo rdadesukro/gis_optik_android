@@ -84,7 +84,7 @@ public class menu_detail extends AppCompatActivity implements optik_view, slider
         optik.get_optik("detail", id_optik);
 
 
-        if (role.equals("1")) {
+        if (role.equals("user")) {
             floatingActionButton.setVisibility(View.GONE);
         } else {
             floatingActionButton.setVisibility(View.VISIBLE);
